@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CurrencySettingPage extends BasePage {
+public class CurrencyChangePage extends BasePage {
 
     @FindBy(xpath = "//select[@id='icp-sc-dropdown']")
     public static WebElement currencyDrp;
@@ -13,20 +13,27 @@ public class CurrencySettingPage extends BasePage {
     @FindBy(xpath = "//span[contains(text(),'Save changes')]")
     private static WebElement saveButton;
 
-    public CurrencySettingPage(WebDriver driver, PropertyManager propertyManager) {
+    @FindBy(xpath = "//span[@id='icp-sc-note']")
+    private static WebElement note;
+
+    public CurrencyChangePage(WebDriver driver, PropertyManager propertyManager) {
         super(driver, propertyManager);
     }
 
-    public CurrencySettingPage selectCurrency(String currency) {
+    public CurrencyChangePage selectCurrency(String currency) {
         selectFromDropdownByText(currencyDrp, currency);
         return this;
+    }
+
+    public String getCurrencyNote(){
+        return note.getText();
     }
 
     public String pageSource(){
         return getPageSource();
     }
 
-    public CurrencySettingPage saveSettings() {
+    public CurrencyChangePage saveSettings() {
         clickOnElement(saveButton);
         return this;
     }
