@@ -5,7 +5,7 @@
     <parameter name="testDataFileName" value="default.properties" />
     <parameter name="browserName" value="Chrome" />
     <classes>
-      <class name="com.amazon.runner.CucumberRunner" />
+      <class name="runner.CucumberRunner" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

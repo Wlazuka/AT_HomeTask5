@@ -15,7 +15,7 @@ public abstract class BaseTest {
     static WebDriver driver;
     protected HomePage homePage;
     protected SearchResultsPage searchResultsPage;
-    protected CurrencySettingPage currencySettingPage;
+    protected CurrencyChangePage currencyChangePage;
     protected CreateAccountPage createAccountPage;
     protected SignInPage signInPage;
     protected ProductDetailsPage productDetailsPage;
@@ -38,7 +38,7 @@ public abstract class BaseTest {
         homePage = new HomePage(driver, propertyManager);
         searchResultsPage = new SearchResultsPage(driver, propertyManager);
         signInPage = new SignInPage(driver, propertyManager);
-        currencySettingPage = new CurrencySettingPage(driver, propertyManager);
+        currencyChangePage = new CurrencyChangePage(driver, propertyManager);
         createAccountPage = new CreateAccountPage(driver, propertyManager);
         productDetailsPage = new ProductDetailsPage(driver, propertyManager);
         subTotalPage = new SubTotalPage(driver, propertyManager);

@@ -1,10 +1,12 @@
-package com.amazon.runner;
+package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.Test;
 
 @CucumberOptions(features = "src/test/resources/features",
-        glue="src/main/java/com/amazon/stepdefinitions")
+        glue={"stepdefinitions"})
+@Test
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
 }
