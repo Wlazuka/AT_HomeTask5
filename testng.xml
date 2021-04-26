@@ -3,7 +3,6 @@
 <suite name="AT_HomeTask5" parallel="tests" thread-count="4">
   <test name="Amazon Chrome Tests">
     <parameter name="testDataFileName" value="default.properties" />
-    <parameter name="browserName" value="Chrome" />
     <classes>
       <class name="runner.CucumberRunner" />
     </classes>

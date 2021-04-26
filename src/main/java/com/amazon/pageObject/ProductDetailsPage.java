@@ -16,6 +16,9 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(xpath = "//input[@id='add-to-cart-button']")
     public static WebElement adToCArtButton;
 
+    @FindBy(xpath = "//span[@id='price']")
+    public static WebElement price;
+
     public ProductDetailsPage(WebDriver driver, PropertyManager propertyManager) {
         super(driver, propertyManager);
     }
@@ -25,7 +28,7 @@ public class ProductDetailsPage extends BasePage {
         return this;
     }
 
-    public ProductDetailsPage selectQuantity(String quantity) {
+    public ProductDetailsPage selectQuantity(int quantity) {
         selectFromDropdownByText(quantityDrp, quantity);
         return this;
     }
@@ -33,6 +36,10 @@ public class ProductDetailsPage extends BasePage {
     public ProductDetailsPage addToCart() {
         clickOnElement(adToCArtButton);
         return this;
+    }
+
+    public double getProductPrice(){
+        return Double.parseDouble(price.getText());
     }
 
 }

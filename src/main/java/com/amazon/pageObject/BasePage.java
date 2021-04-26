@@ -56,8 +56,18 @@ public class BasePage extends Page {
         dropdown.selectByValue(value);
     }
 
+    protected void selectFromDropdownByValue(WebElement element, int value) {
+        Select dropdown = new Select(element);
+        dropdown.selectByValue(Integer.toString(value));
+    }
+
     protected void selectFromDropdownByText(WebElement element, String value) {
         Select dropdown = new Select(element);
         dropdown.selectByVisibleText(value);
+    }
+
+    protected void selectFromDropdownByText(WebElement element, int value) {
+        Select dropdown = new Select(element);
+        dropdown.selectByVisibleText(Integer.toString(value));
     }
 }

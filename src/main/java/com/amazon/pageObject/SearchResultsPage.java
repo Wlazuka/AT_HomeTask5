@@ -7,19 +7,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchResultsPage extends BasePage {
 
-    @FindBy(xpath = "//span[contains(text(), 'Beyond Order: 12 More Rules for Life')]")
-    public static WebElement searchedItem;
+    @FindBy(xpath = "//span[@cel_widget_id='MAIN-SEARCH_RESULTS-1']//span[@class='a-size-base-plus a-color-base a-text-normal']")
+    public static WebElement firstResutlInSearch;
 
     public SearchResultsPage(WebDriver driver, PropertyManager propertyManager) {
         super(driver, propertyManager);
     }
 
-    public SearchResultsPage choseItem() {
-        clickOnElement(searchedItem);
+    public SearchResultsPage choseFirstResult() {
+        clickOnElement(firstResutlInSearch);
         return this;
-    }
-
-    public String pageSource() {
-        return getPageSource();
     }
 }

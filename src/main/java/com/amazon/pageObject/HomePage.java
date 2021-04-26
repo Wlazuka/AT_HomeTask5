@@ -41,7 +41,7 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    public HomePage changeCurrency() {
+    public HomePage goToSettings() {
         clickOnElement(changeLanguageButton);
         return this;
     }

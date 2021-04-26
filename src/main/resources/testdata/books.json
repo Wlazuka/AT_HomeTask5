@@ -1,0 +1,19 @@
+{
+  "Books": [
+    {
+      "title": "Beyond Order: 12 More Rules for Life",
+      "type": "Hardcover",
+      "price": 17.40
+    },
+    {
+      "title": "12 Rules for Life: An Antidote to Chaos",
+      "type": "Hardcover",
+      "price": 13.06
+    },
+    {
+      "title": "Maps of Meaning",
+      "type": "Hardcover",
+      "price": 122
+    }
+  ]
+}
