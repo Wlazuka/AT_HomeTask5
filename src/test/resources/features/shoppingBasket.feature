@@ -1,4 +1,3 @@
-@smoke
 Feature: Shopping basket
 
   Scenario Outline: Items in the cart checkout
@@ -9,7 +8,7 @@ Feature: Shopping basket
     And the total price of the cart is $<totalprice>
 
     Examples:
-      | title                                  | quantity | totalprice |
-      | "Beyond Order: 12 More Rules for Life" | 2        | 34.80      |
+      | title                                | quantity | totalprice |
+      | Beyond Order: 12 More Rules for Life | 2        | 34.80      |
 
 

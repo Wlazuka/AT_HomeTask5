@@ -15,6 +15,7 @@ public class SubTotalPage extends BasePage {
     }
 
     public SubTotalPage goToCart() {
+        wait.forElementToLoad(cartButton);
         clickOnElement(cartButton);
         return this;
     }

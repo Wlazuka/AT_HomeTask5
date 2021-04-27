@@ -23,13 +23,14 @@ public class ProductDetailsPage extends BasePage {
         super(driver, propertyManager);
     }
 
-    public ProductDetailsPage choseHardCover() {
+    public ProductDetailsPage chooseHardCover() {
         clickOnElement(hardCoverButton);
         return this;
     }
 
-    public ProductDetailsPage selectQuantity(int quantity) {
-        selectFromDropdownByText(quantityDrp, quantity);
+    public ProductDetailsPage setQuantity(int quantity) {
+        wait.forElementToLoad(quantityDrp);
+        selectFromDropdownByValue(quantityDrp, quantity);
         return this;
     }
 

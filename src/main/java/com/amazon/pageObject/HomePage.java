@@ -1,6 +1,7 @@
 package com.amazon.pageObject;
 
 import com.amazon.utils.PropertyManager;
+import com.amazon.utils.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,6 +48,7 @@ public class HomePage extends BasePage {
     }
 
     public HomePage signIn() {
+        wait.forElementToLoad(signInLink);
         clickOnElement(signInLink);
         return this;
     }

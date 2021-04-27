@@ -37,15 +37,17 @@ public class AddToBasket {
                 .dontChangeCountryIfRequired()
                 .searchProduct(item);
         Assert.assertTrue(pageManager.searchResultsPage.getPageSource().contains(item));
-        pageManager.searchResultsPage.choseFirstResult();
+        pageManager
+                .searchResultsPage
+                .chooseFirstResult();
     }
 
     @Given("user has added {int} book\\(s) to shopping cart")
     public void user_has_added_book_s_to_shopping_cart(int quantity) {
         pageManager
                 .productDetailsPage
-                .choseHardCover()
-                .selectQuantity(quantity)
+                .chooseHardCover()
+                .setQuantity(quantity)
                 .addToCart();
     }
 
